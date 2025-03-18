@@ -51,7 +51,7 @@
 
 
 * 運用：
-  *Vue CLI
-  *Vuex
-  *Vue Router
-  *Bootstrap
+  * Vue CLI
+  * Vuex
+  * Vue Router
+  * Bootstrap
