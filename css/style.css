@@ -98,29 +98,28 @@ body{
 /* 作品 */
 .project-part{
     width: 90%;
-    height: 80vh;
+    height: 78vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 20px auto;
 }
-.project-part::after{
-    content:"";
-    background:url("../images/decoration.png")no-repeat center bottom/cover;
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-}
 .project1, .project2{
     width: 45%;
-    height: 85vh;
     background:rgb(223, 219, 187);
     line-height: 1.5;
     border-radius: 50px;
     position: relative;
     cursor: pointer;
+}
+.project2::after{
+    content:"";
+    background:url("../images/decoration.png")no-repeat center center/contain;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    right: -75px;
+    top: -85px;
 }
 .project1:hover{
     filter: saturate(160%);
@@ -140,11 +139,19 @@ body{
 .project2:hover{
     filter: saturate(160%);
 }
-.project1-img, .project2-img{
-    width: 90%;
+.project1-img{
+    width: 82%;
+    object-fit: contain;
     display: block;
-    margin: 20px auto;
-    border-radius: 40px;
+    margin: 15px 55px 20px;
+    border-radius: 30px;
+}
+.project2-img{
+    width: 80%;
+    object-fit: contain;
+    display: block;
+    margin: 15px 55px 20px;
+    border-radius: 30px;
 }
 .info-part{
     margin-bottom: 20px;
@@ -166,8 +173,8 @@ body{
 
 .project1-img-part>.project1-img{
     position: absolute;
-    bottom: 0px;
-    right: 30px;
+    /* bottom: 0px; */
+    /* right: 40px; */
     opacity: 0;
     animation: project1Animation 48s linear infinite;
 }
@@ -203,8 +210,8 @@ body{
 
 .project2-img-part>.project2-img{
     position: absolute;
-    bottom: 0px;
-    right: 30px;
+    /* bottom: 0px; */
+    /* right: 40px; */
     opacity: 0;
     animation: project2Animation 104s linear infinite;
 }
@@ -298,50 +305,48 @@ body{
     }
     .project-part{
         display: block;
-    }
-    .project-part::after{
-        content:"";
-        background:none;
+        height: 100%;
+        margin-bottom: 20px;
     }
     .project1, .project2{
         width: 92%;
         margin: auto;
         border-radius: 10px;
-        padding: 10px 20px 20px;
+        padding: 10px 15px 20px;
         margin-bottom: 20px;
         position: relative;
     }
     .project1{
-        height: 600px;
+        height: 610px;
     }
     .project2{
-        height: 660px;
+        height: 650px;
     }
     .project2::after{
         content:"";
-        background:url("../images/decoration.png")no-repeat right bottom/cover;
-        width: 120px;
-        height: 120px;
+        background:url("../images/decoration.png")no-repeat right bottom/contain;
+        width: 110px;
+        height: 110px;
         position: absolute;
-        right: -60px;
+        right: -30px;
         bottom: -10px;
     }
     .info-part{
         font-size: 16px;
     }
     .project-part img{
-        margin: 10px auto;
+        margin: 20px;
         border-radius: 20px;
     }
     .project1-img-part>.project1-img{
         position: absolute;
-        bottom: 5px;
-        right: 15px;
+        bottom: 3px;
+        right: 10px;
     }
     .project2-img-part>.project2-img{
         position: absolute;
-        bottom: 5px;
-        right: 15px;
+        bottom: 3px;
+        right: 10px;
     }
     .description{
         font-size: 16px;
